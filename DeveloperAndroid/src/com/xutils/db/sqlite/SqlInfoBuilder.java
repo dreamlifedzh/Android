@@ -111,7 +111,7 @@ public class SqlInfoBuilder {
             throw new DbException("this entity[" + entity.getClass() + "]'s id value is null");
         }
         StringBuilder sb = new StringBuilder(buildDeleteSqlByTableName(table.tableName));
-        sb.append(" WHERE ").append(WhereBuilder.b(id.getColumnName(), "=", idValue));
+        sb.append(" WHERE ").append(WhereBuilder.where(id.getColumnName(), "=", idValue));
 
         result.setSql(sb.toString());
 
@@ -128,7 +128,7 @@ public class SqlInfoBuilder {
             throw new DbException("this entity[" + entityType + "]'s id value is null");
         }
         StringBuilder sb = new StringBuilder(buildDeleteSqlByTableName(table.tableName));
-        sb.append(" WHERE ").append(WhereBuilder.b(id.getColumnName(), "=", idValue));
+        sb.append(" WHERE ").append(WhereBuilder.where(id.getColumnName(), "=", idValue));
 
         result.setSql(sb.toString());
 
@@ -179,7 +179,7 @@ public class SqlInfoBuilder {
             }
         }
         sqlBuffer.deleteCharAt(sqlBuffer.length() - 1);
-        sqlBuffer.append(" WHERE ").append(WhereBuilder.b(id.getColumnName(), "=", idValue));
+        sqlBuffer.append(" WHERE ").append(WhereBuilder.where(id.getColumnName(), "=", idValue));
 
         result.setSql(sqlBuffer.toString());
         return result;

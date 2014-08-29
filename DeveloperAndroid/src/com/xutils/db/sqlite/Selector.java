@@ -50,7 +50,7 @@ public class Selector {
     }
 
     public Selector where(String columnName, String op, Object value) {
-        this.whereBuilder = WhereBuilder.b(columnName, op, value);
+        this.whereBuilder = WhereBuilder.where(columnName, op, value);
         return this;
     }
 
@@ -76,7 +76,7 @@ public class Selector {
 
     public Selector expr(String expr) {
         if (this.whereBuilder == null) {
-            this.whereBuilder = WhereBuilder.b();
+            this.whereBuilder = WhereBuilder.where();
         }
         this.whereBuilder.expr(expr);
         return this;
@@ -84,7 +84,7 @@ public class Selector {
 
     public Selector expr(String columnName, String op, Object value) {
         if (this.whereBuilder == null) {
-            this.whereBuilder = WhereBuilder.b();
+            this.whereBuilder = WhereBuilder.where();
         }
         this.whereBuilder.expr(columnName, op, value);
         return this;

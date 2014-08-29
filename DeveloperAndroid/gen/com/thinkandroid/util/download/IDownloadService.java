@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: D:\\Work\\workspace\\eclipse\\DeveloperAndroid\\src\\com\\thinkandroid\\util\\download\\IDownloadService.aidl
+ * Original file: D:\\Work\\GitHub\\Repositories\\Android\\DeveloperAndroid\\src\\com\\thinkandroid\\util\\download\\IDownloadService.aidl
  */
 package com.thinkandroid.util.download;
 public interface IDownloadService extends android.os.IInterface

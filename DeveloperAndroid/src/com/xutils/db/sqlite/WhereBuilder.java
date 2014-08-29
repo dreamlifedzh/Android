@@ -43,7 +43,7 @@ public class WhereBuilder {
      *
      * @return
      */
-    public static WhereBuilder b() {
+    public static WhereBuilder where() {
         return new WhereBuilder();
     }
 
@@ -55,7 +55,7 @@ public class WhereBuilder {
      * @param value
      * @return
      */
-    public static WhereBuilder b(String columnName, String op, Object value) {
+    public static WhereBuilder where(String columnName, String op, Object value) {
         WhereBuilder result = new WhereBuilder();
         result.appendCondition(null, columnName, op, value);
         return result;
